@@ -18,6 +18,7 @@ To run this project locally, follow these steps:
 -Local storage for storing user and cart data, synced with the JSON server\
 -Pipes and custom pipes for data formatting and manipulation\
 -Fortawesome packages for icons\
+-Add routing and guards.\
 -Bootstrap for the slider
 
 ## Usage
