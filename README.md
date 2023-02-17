@@ -12,7 +12,7 @@ To run this project locally, follow these steps:
 3-Start the JSON server: 'json-server --watch db.json'\
 4-Start the Angular app: 'ng serve'
 
-## Feature
+## Features
 -JSON server API for items, authentication, and cart items\
 -Forms using form-driven and reactive approaches with validators\
 -Local storage for storing user and cart data, synced with the JSON server\
