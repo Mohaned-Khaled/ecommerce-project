@@ -1,0 +1,32 @@
+<div class="product-list">
+  <h1>Product List</h1>
+
+  <app-loading-spinner *ngIf="loadingProducts"></app-loading-spinner>
+
+  <div class="products" *ngIf="!loadingProducts">
+    <div class="product" *ngFor="let item of productList">
+      <div class="image-container">
+        <img src="{{ item.url }}" alt="{{ item.name }}" />
+      </div>
+
+      <div class="info-container">
+        <p><strong>Name:</strong> {{ item.name }}</p>
+        <p><strong>Category:</strong> {{ item.category }}</p>
+        <p><strong>Color:</strong> {{ item.color }}</p>
+        <p><strong>Price:</strong> £{{ item.price }}</p>
+        <p><strong>Description:</strong> {{ item.description }}</p>
+        <div class="button-container">
+          <button class="delete-button" (click)="onDeleteProduct(item.id)">
+            <fa-icon [icon]="trashIcon"></fa-icon>
+            Delete
+          </button>
+          <a
+            class="product-update"
+            routerLink="/seller-update-product/{{ item.id }}"
+            ><fa-icon [icon]="editIcon"></fa-icon> Update Product</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

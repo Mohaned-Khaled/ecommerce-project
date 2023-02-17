@@ -1,0 +1,25 @@
+.user-auth h1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: var(--white);
+}
+
+p {
+  margin: 0;
+}
+
+.sign-up > p,
+.login > p {
+  margin-bottom: 20px;
+}
+
+.toggle-style {
+  text-align: center;
+  color: var(--white);
+}
+
+.toggle-style a {
+  cursor: pointer;
+  text-decoration: underline;
+}

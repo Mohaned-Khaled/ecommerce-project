@@ -1,0 +1,19 @@
+.sign-up,
+.login {
+  text-align: center;
+}
+
+.seller-auth {
+  margin-top: 50px;
+}
+
+.sign-up h1,
+.login h1 {
+  margin-bottom: 80px;
+  color: var(--white);
+}
+
+.form-mode {
+  font-size: 13px;
+  cursor: pointer;
+}

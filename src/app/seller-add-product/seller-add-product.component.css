@@ -1,0 +1,9 @@
+.add-product {
+  margin-top: 50px;
+}
+
+.add-product h1 {
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--white);
+}

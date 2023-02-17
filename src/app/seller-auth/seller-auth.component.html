@@ -1,0 +1,92 @@
+<div class="seller-auth">
+  <div class="sign-up" *ngIf="!loginMode">
+    <h1>Seller Sign Up</h1>
+    <form class="form" (ngSubmit)="onSignup(f)" #f="ngForm">
+      <input
+        type="text"
+        placeholder="Enter Name"
+        name="name"
+        class="form-input"
+        ngModel
+        required
+        #name="ngModel"
+      />
+      <span class="error-handle" *ngIf="!name.valid && name.touched"
+        >Name shoud not be empty</span
+      >
+      <input
+        class="form-input"
+        type="text"
+        placeholder="Enter Email"
+        name="email"
+        ngModel
+        required
+        email
+        #email="ngModel"
+      />
+      <span class="error-handle" *ngIf="!email.valid && email.touched"
+        >Please enter a valid email</span
+      >
+      <input
+        class="form-input"
+        type="password"
+        placeholder="Enter Password"
+        name="password"
+        ngModel
+        required
+        minlength="6"
+        #password="ngModel"
+      />
+      <span class="error-handle" *ngIf="!password.valid && password.touched"
+        >Password shoud not be empty && password >= 6</span
+      >
+
+      <button class="form-button" type="submit" [disabled]="!f.valid">
+        Sign Up
+      </button>
+      <a class="form-mode" (click)="onFormMode()"
+        >Already have account ? Click for login</a
+      >
+    </form>
+  </div>
+  <div class="login" *ngIf="loginMode">
+    <h1>Seller Login</h1>
+    <div class="error-p">
+      <span *ngIf="error" class="error-handle">{{ error }}</span>
+    </div>
+    <form class="form" (ngSubmit)="onLogin(loginF)" #loginF="ngForm">
+      <input
+        class="form-input"
+        type="text"
+        placeholder="Enter Email"
+        name="email"
+        ngModel
+        required
+        email
+        #email="ngModel"
+      />
+      <span class="error-handle" *ngIf="!email.valid && email.touched"
+        >Please enter a valid email</span
+      >
+      <input
+        class="form-input"
+        type="password"
+        placeholder="Enter Password"
+        name="password"
+        ngModel
+        required
+        minlength="6"
+        #password="ngModel"
+      />
+      <span class="error-handle" *ngIf="!password.valid && password.touched"
+        >Password shoud not be empty && password >= 6</span
+      >
+      <button class="form-button" type="submit" [disabled]="!loginF.valid">
+        Login
+      </button>
+      <a class="form-mode" (click)="onFormMode2()"
+        >Don't have account ? Click for sign up</a
+      >
+    </form>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<h1>My Orders</h1>
+<div *ngIf="isLoading && !isEmpty" style="text-align: center">
+  <app-loading-spinner></app-loading-spinner>
+</div>
+
+<div class="my-orders" *ngIf="!isLoading && !isEmpty">
+  <div class="box">
+    <div class="small-box">
+      <span>Order Id</span>
+    </div>
+
+    <div class="small-box">
+      <span>Price</span>
+    </div>
+
+    <div class="small-box">
+      <span>Status</span>
+    </div>
+
+    <div class="small-box">
+      <span>The Action</span>
+    </div>
+  </div>
+
+  <div class="box" *ngFor="let order of orderData">
+    <div class="small-box">
+      <span>num: #{{ order.id }}</span>
+    </div>
+
+    <div class="small-box">
+      <span>{{ order.totalPrice }}</span>
+    </div>
+
+    <div class="small-box">
+      <span>In Process</span>
+    </div>
+
+    <div class="small-box">
+      <span
+        ><button class="form-button" (click)="onRemoveOrder(order.id)">
+          Cancel
+        </button></span
+      >
+    </div>
+  </div>
+</div>
+
+<div
+  style="text-align: center; color: var(--white)"
+  class=""
+  *ngIf="isEmpty && !isLoading"
+>
+  You don't have orders
+</div>

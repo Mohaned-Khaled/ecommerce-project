@@ -1,0 +1,45 @@
+.trendy-products {
+  margin-top: 80px;
+  text-align: center;
+  color: var(--white);
+}
+
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 2rem;
+}
+
+.product-list-wrapper {
+  width: 300px;
+  background-color: var(--bright-green);
+  padding: 10px;
+  border-radius: 15px;
+  color: var(--white);
+}
+
+.product-list-wrapper h6 {
+  font-size: 22px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.product-item img {
+  width: 100%;
+  object-fit: cover;
+  height: 280px;
+  border-radius: 15px;
+}
+
+.product-footer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-footer a {
+  background-color: var(--deep-green) !important;
+  border: transparent;
+}

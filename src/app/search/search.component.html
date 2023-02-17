@@ -1,0 +1,36 @@
+<h1 *ngIf="!loading">The result of ({{ seachedParams }})</h1>
+<div
+  class="container-search-items"
+  *ngIf="prods && prods.length > 0 && !loading"
+>
+  <div
+    class="row search-item"
+    *ngFor="let prod of prods"
+    routerLink="/product-details/{{ prod.id }}"
+  >
+    <div class="col-sm-4 image-container">
+      <img src="{{ prod.url }}" alt="" />
+    </div>
+    <div class="col-sm-8 details">
+      <h6>{{ prod.name }}</h6>
+      <p>
+        <b>Price: {{ prod.price }}</b>
+      </p>
+      <p>
+        <span>Color: {{ prod.color }}</span>
+      </p>
+      <p>
+        <span> Category: {{ prod.category }}</span>
+      </p>
+      <p>{{ prod.description | shortWords : 150 }}</p>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="loading" style="text-align: center; margin-top: 1rem">
+  <app-loading-spinner></app-loading-spinner>
+</div>
+
+<div class="handle-error" *ngIf="nothingMsg && !loading">
+  <p>{{ nothingMsg }}</p>
+</div>
