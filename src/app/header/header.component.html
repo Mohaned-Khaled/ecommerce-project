@@ -1,0 +1,71 @@
+<nav class="nav">
+  <h1><a routerLink="/">E-comm</a></h1>
+  <div class="nav-search" *ngIf="viewSearchBar === '1'">
+    <input
+      #inputEle
+      type="text"
+      placeholder="Search Products"
+      (keyup)="onSearchProduct($event)"
+      (blur)="onHideList()"
+    />
+    <button (click)="onSbumitSearch(inputEle.value)">Search</button>
+    <ul
+      *ngIf="searchingProds && searchingProds.length > 0"
+      class="searching-prods"
+    >
+      <li *ngFor="let prod of searchingProds">
+        <a class="searching-prod" (mousedown)="redirectTo(prod.id)">
+          <img [src]="prod.url" alt="" />
+          <div>
+            <div>{{ prod.name }}</div>
+            <div>Category: {{ prod.category }}</div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div [ngSwitch]="viewSearchBar">
+    <ul *ngSwitchCase="'1'" class="links-container">
+      <li routerLinkActive="active-link">
+        <a routerLink="/seller-auth">Seller</a>
+      </li>
+      <li
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <a routerLink="">Home</a>
+      </li>
+      <li *ngIf="!userName" routerLinkActive="active-link">
+        <a routerLink="/user-auth">Login/Sign-up</a>
+      </li>
+      <li *ngIf="userName" routerLinkActive="active-link">
+        <a routerLink="/my-orders">Orders</a>
+      </li>
+      <li [ngClass]="{ 'active-link': router.isActive('/cart-page', true) }">
+        <a [routerLink]="cartItems > 0 ? '/cart-page' : '/'"
+          >Cart({{ cartItems }})</a
+        >
+      </li>
+      <li *ngIf="userName"><a (click)="userLogout()">Logout</a></li>
+      <li *ngIf="userName">
+        <a>{{ userName | titlecase }}</a>
+      </li>
+    </ul>
+
+    <ul *ngSwitchCase="'0'" class="links-container">
+      <li routerLinkActive="active-link">
+        <a routerLink="/seller-add-product">Add Product</a>
+      </li>
+      <li
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <a routerLink="seller-home">List</a>
+      </li>
+      <li>
+        <a href="">Hello {{ sellerName | titlecase }}</a>
+      </li>
+      <li><a (click)="logout()">Logout</a></li>
+    </ul>
+  </div>
+</nav>

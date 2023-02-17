@@ -1,0 +1,118 @@
+{
+  "seller": [
+    {
+      "name": "Mohaned Khaled",
+      "password": "123456",
+      "email": "mohanedkhf98@gmail.com",
+      "id": 1
+    }
+  ],
+  "products": [
+    {
+      "id": 6,
+      "name": "Iphone 12",
+      "price": "25000",
+      "category": "Mobile",
+      "color": "Blue",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, exercitationem corrupti minima cum beatae odio laudantium voluptatem animi voluptatum, autem dolorem modi perferendis numquam sunt, labore ullam odit eveniet possimus!",
+      "url": "https://mobizil.com/wp-content/uploads/2020/10/Apple-iPhone-12.jpg"
+    },
+    {
+      "name": "Samsung s21 ultra",
+      "price": "22000",
+      "category": "Mobile",
+      "color": "Silver",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, exercitationem corrupti minima cum beatae odio laudantium voluptatem animi voluptatum, autem dolorem modi perferendis numquam sunt, labore ullam odit eveniet possimu",
+      "url": "https://www.thaqfny.com/wp-content/uploads/2021/04/images-42.jpeg",
+      "id": 7
+    },
+    {
+      "name": "iphone 14",
+      "price": "45000",
+      "category": "Mobile",
+      "color": "blue",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, exercitationem corrupti minima cum beatae odio laudantium voluptatem animi voluptatum, autem dolorem modi perferendis numquam sunt, labore ullam odit eveniet possimu",
+      "url": "https://www.smart.com.kh/media/2022/10/iPhone_14_Blue01-min.jpg",
+      "id": 11
+    },
+    {
+      "id": 8,
+      "name": "BMW",
+      "price": "1000000",
+      "category": "Car",
+      "color": "Blue",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, exercitationem corrupti minima cum beatae odio laudantium voluptatem animi voluptatum, autem dolorem modi perferendis numquam sunt, labore ullam odit eveniet possimu",
+      "url": "https://i0.wp.com/picjumbo.com/wp-content/uploads/white-bmw-x6m-wallpaper-free-photo.jpg?w=1024&quality=50"
+    },
+    {
+      "name": "Motorcycle",
+      "price": "50000",
+      "category": "Motor",
+      "color": "Red",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, exercitationem corrupti minima cum beatae odio laudantium voluptatem animi voluptatum, autem dolorem modi perferendis numquam sunt, labore ullam odit eveniet possimu",
+      "url": "https://media.gettyimages.com/id/157584006/photo/red-motorcycle.jpg?s=612x612&w=gi&k=20&c=kHvHRfnMu2eLW-6QwoY5-I7ZCjHjm8-cBR9yCBvVX1o=",
+      "id": 9
+    },
+    {
+      "name": "Mercedes",
+      "price": "1200000",
+      "category": "Car",
+      "color": "Red",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, exercitationem corrupti minima cum beatae odio laudantium voluptatem animi voluptatum, autem dolorem modi perferendis numquam sunt, labore ullam odit eveniet possimu",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLlNOsB7APy3Tb0BasN6sTxfYZO77ShCF2Rg&usqp=CAU",
+      "id": 10
+    },
+    {
+      "name": "Samsung A70",
+      "price": "8000",
+      "category": "Mobile",
+      "color": "Black",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, exercitationem corrupti minima cum beatae odio laudantium voluptatem animi voluptatum, autem dolorem modi perferendis numquam sunt, labore ullam odit eveniet possimu",
+      "url": "https://review-plus.com/wp-content/uploads/2019/03/Samsung-Galaxy-A70-2-600x600.jpg",
+      "id": 12
+    },
+    {
+      "name": "Samsung A52",
+      "price": "12000",
+      "category": "Mobile",
+      "color": "Black",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, exercitationem corrupti minima cum beatae odio laudantium voluptatem animi voluptatum, autem dolorem modi perferendis numquam sunt, labore ullam odit eveniet possimu",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHJEkI0yjc29eCpJ_9-HLV-an7ZTKxxJkMpg&usqp=CAU",
+      "id": 13
+    },
+    {
+      "name": "Samsung A32",
+      "price": "6000",
+      "category": "Mobile",
+      "color": "Blue",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, exercitationem corrupti minima cum beatae odio laudantium voluptatem animi voluptatum, autem dolorem modi perferendis numquam sunt, labore ullam odit eveniet possimu",
+      "url": "https://mobizil.com/wp-content/uploads/2021/02/Samsung-Galaxy-A32.jpg",
+      "id": 14
+    }
+  ],
+  "users": [
+    {
+      "name": "Mohaned",
+      "email": "mohanedkhf98@gmail.com",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "name": "Apple",
+      "email": "test@test.com",
+      "password": "123456",
+      "id": 2
+    }
+  ],
+  "cart": [],
+  "orders": [
+    {
+      "email": "mohanedkhf98@gmail.com",
+      "address": "Nasr City",
+      "contact": "12312312",
+      "userId": 1,
+      "totalPrice": "22980",
+      "id": 1
+    }
+  ]
+}

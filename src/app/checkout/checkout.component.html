@@ -1,0 +1,37 @@
+<div class="checkout">
+  <h1>Checkout</h1>
+  <p *ngIf="orderMsg" class="success-p success-b">{{ orderMsg }}</p>
+  <div class="box">
+    <div class="address">
+      <h3>Add Shipping Address</h3>
+      <form #orderData="ngForm" class="form" (ngSubmit)="onSubmit(orderData)">
+        <input
+          type="text"
+          class="form-input"
+          name="email"
+          ngModel
+          placeholder="Enter Email"
+        />
+        <input
+          type="text"
+          class="form-input"
+          name="address"
+          ngModel
+          placeholder="Enter Address"
+        />
+        <input
+          type="text"
+          class="form-input"
+          name="contact"
+          ngModel
+          placeholder="Enter Number"
+        />
+        <button class="form-button" type="submit">Order Now</button>
+      </form>
+    </div>
+    <div class="total">
+      <h3>Total Amount: {{ totalPrice }}</h3>
+      <h4>Payment Method: <b>On Delivery</b></h4>
+    </div>
+  </div>
+</div>

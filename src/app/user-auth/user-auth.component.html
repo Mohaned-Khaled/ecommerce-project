@@ -1,0 +1,95 @@
+<div class="user-auth">
+  <div class="sign-up" *ngIf="!loginMode">
+    <h1>User Signup</h1>
+    <p class="toggle-style">
+      Already have account ? <a (click)="onChangeFormMode()">Click here</a>
+    </p>
+    <form #userSignup="ngForm" (ngSubmit)="signUp(userSignup)" class="form">
+      <input
+        type="text"
+        name="name"
+        placeholder="Enter username"
+        ngModel
+        class="form-input"
+        required
+        #nameInput="ngModel"
+      />
+      <p class="error-handle" *ngIf="!nameInput.valid && nameInput.touched">
+        Name shoud not be empty
+      </p>
+      <input
+        type="text"
+        name="email"
+        placeholder="Enter email"
+        class="form-input"
+        ngModel
+        required
+        email
+        #emailInput="ngModel"
+      />
+      <p class="error-handle" *ngIf="!emailInput.valid && emailInput.touched">
+        Email shoud not be empty & Valid email
+      </p>
+      <input
+        type="password"
+        name="password"
+        placeholder="Enter password"
+        class="form-input"
+        ngModel
+        required
+        minlength="6"
+        #passwordInput="ngModel"
+      />
+      <p
+        class="error-handle"
+        *ngIf="!passwordInput.valid && passwordInput.touched"
+      >
+        Password shoud not be empty & Password >= 6
+      </p>
+      <button class="form-button" type="submit" [disabled]="!userSignup.valid">
+        Sign Up
+      </button>
+    </form>
+  </div>
+
+  <div class="login" *ngIf="loginMode">
+    <h1>User Login</h1>
+    <p class="p-error error-handle" style="text-align: center" *ngIf="errorMsg">
+      {{ errorMsg }}
+    </p>
+    <p class="toggle-style">
+      Don't have account ? <a (click)="onChangeFormMode()">Click here</a>
+    </p>
+    <form #userLogin="ngForm" (ngSubmit)="login(userLogin)" class="form">
+      <input
+        type="text"
+        name="email"
+        placeholder="Enter email"
+        class="form-input"
+        ngModel
+        required
+        email
+        #email="ngModel"
+      />
+      <p class="error-handle" *ngIf="!email.valid && email.touched">
+        Email shoud not be empty & Valid email
+      </p>
+      <input
+        type="password"
+        name="password"
+        placeholder="Enter password"
+        class="form-input"
+        ngModel
+        required
+        minlength="6"
+        #password="ngModel"
+      />
+      <p class="error-handle" *ngIf="!password.valid && password.touched">
+        Password shoud not be empty & Password >= 6
+      </p>
+      <button class="form-button" type="submit" [disabled]="!userLogin.valid">
+        Login
+      </button>
+    </form>
+  </div>
+</div>

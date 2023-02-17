@@ -1,0 +1,97 @@
+<div class="edit-product">
+  <h1>Update New Product</h1>
+
+  <form class="form" [formGroup]="productForm" (ngSubmit)="onEditProduct()">
+    <input
+      type="text"
+      class="form-input"
+      placeholder="Enter Product Name"
+      formControlName="name"
+    />
+    <span
+      class="error-handle"
+      *ngIf="
+        !this.productForm.get('name').valid &&
+        this.productForm.get('name').touched
+      "
+      >Product name can not be empty</span
+    >
+    <input
+      type="text"
+      class="form-input"
+      placeholder="Enter Product Price"
+      formControlName="price"
+    />
+    <span
+      class="error-handle"
+      *ngIf="
+        !this.productForm.get('price').valid &&
+        this.productForm.get('price').touched
+      "
+      >Price can not be empty</span
+    >
+    <input
+      type="text"
+      class="form-input"
+      placeholder="Enter Product Category"
+      formControlName="category"
+    />
+    <span
+      class="error-handle"
+      *ngIf="
+        !this.productForm.get('category').valid &&
+        this.productForm.get('category').touched
+      "
+      >Category can not be empty</span
+    >
+    <input
+      type="text"
+      class="form-input"
+      placeholder="Enter Product Color"
+      formControlName="color"
+    />
+    <span
+      class="error-handle"
+      *ngIf="
+        !this.productForm.get('color').valid &&
+        this.productForm.get('color').touched
+      "
+      >Color can not be empty</span
+    >
+    <textarea
+      name=""
+      rows="10"
+      placeholder="Enter Product Description"
+      formControlName="description"
+    ></textarea>
+    <span
+      class="error-handle"
+      *ngIf="
+        !this.productForm.get('description').valid &&
+        this.productForm.get('description').touched
+      "
+      >description can not be empty</span
+    >
+    <input
+      type="text"
+      class="form-input"
+      placeholder="Enter Product Image URL"
+      formControlName="url"
+    />
+    <span
+      class="error-handle"
+      *ngIf="
+        !this.productForm.get('url').valid &&
+        this.productForm.get('url').touched
+      "
+      [textContent]="
+        getUrlControl().errors['required']
+          ? 'URL can not be empty'
+          : 'Please enter a valid url'
+      "
+    ></span>
+    <button class="form-button" type="submit" [disabled]="!productForm.valid">
+      Update Product
+    </button>
+  </form>
+</div>
