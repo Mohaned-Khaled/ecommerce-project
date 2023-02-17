@@ -7,7 +7,7 @@ This is an Angular ecommerce project that allows users to browse  buy and add it
 
 To run this project locally, follow these steps:
 
-1-Clone the repository to your local machine: git clone 'https://github.com/Mohaned-Khaled/ecommerce-project.git'.\
+1-Clone the repository to your local machine: git clone 'https://github.com/Mohaned-Khaled/ecommerce-project.git'. \
 2-Install the dependencies: 'npm install'\
 3-Start the JSON server: 'json-server --watch db.json'\
 4-Start the Angular app: 'ng serve'
